@@ -79,9 +79,9 @@ class SimpleSearch:
 
     def interactive_search(self):
         '''
-        Don't like running application logic here but doing it the init makes
-        it difficult to test. If it wasn't a console application we probably
-        would do other stuff in a similar entry method.
+        Don't like running _read_files here but doing it the init makes it
+        difficult to test. If it wasn't a console application we probably would
+        do other stuff in a similar entry method.
         '''
         self._read_files()
         print("search> ", end="", flush=True)
