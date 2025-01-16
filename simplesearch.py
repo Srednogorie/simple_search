@@ -53,6 +53,10 @@ class SimpleSearch:
         self.build_report(result)
 
     def build_report(self, result):
+        '''
+        Filling the report with 0% records for files not found in the result.
+        Sorting based on the percent of words found in the file.
+        '''
         if not result:
             print("No matches found.")
         else:
@@ -74,6 +78,11 @@ class SimpleSearch:
             print(f"    -- Words found: {entry[1][1]}")
 
     def interactive_search(self):
+        '''
+        Don't like running application logic here but doing it the init makes
+        it difficult to test. If it wasn't a console application we probably
+        would do other stuff in a similar entry method.
+        '''
         self._read_files()
         print("search> ", end="", flush=True)
         while True:
